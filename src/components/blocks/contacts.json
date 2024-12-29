@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_blocks_contacts",
+  "info": {
+    "displayName": "contacts",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Contacts"
+    },
+    "phone": {
+      "type": "component",
+      "repeatable": false,
+      "component": "components.phone"
+    },
+    "email": {
+      "displayName": "email",
+      "type": "component",
+      "repeatable": false,
+      "component": "components.email"
+    },
+    "instagram": {
+      "displayName": "instagram",
+      "type": "component",
+      "repeatable": false,
+      "component": "components.instagram"
+    },
+    "address": {
+      "type": "component",
+      "repeatable": true,
+      "component": "components.address"
+    },
+    "map_link": {
+      "type": "string"
+    }
+  }
+}

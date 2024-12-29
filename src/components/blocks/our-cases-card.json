@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_blocks_our_cases_cards",
+  "info": {
+    "displayName": "our_cases_card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "period": {
+      "displayName": "period",
+      "type": "component",
+      "repeatable": false,
+      "component": "components.period"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    }
+  }
+}

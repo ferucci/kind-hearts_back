@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "indices",
+  "info": {
+    "singularName": "index",
+    "pluralName": "indices",
+    "displayName": "index",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "questions": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.spoiler"
+      ]
+    },
+    "advantages": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.our-data"
+    },
+    "what_we_do": {
+      "displayName": "what_we_do",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.what-we-do"
+    },
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.hero-block"
+    },
+    "our_cases_title": {
+      "type": "string",
+      "default": "Our cases"
+    },
+    "our_cases_cards": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.our-cases-card"
+      ]
+    },
+    "ways_to_help": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.ways-to-help"
+    },
+    "how_supported": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.how-supported"
+    },
+    "questions_title": {
+      "type": "string"
+    },
+    "form": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.form"
+    },
+    "contacts": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.contacts"
+    },
+    "name": {
+      "type": "string",
+      "default": "Kind Hearts"
+    },
+    "logo_images": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.hero-images"
+    }
+  }
+}

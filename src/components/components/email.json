@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_components_emails",
+  "info": {
+    "displayName": "email"
+  },
+  "options": {},
+  "attributes": {
+    "href": {
+      "type": "string",
+      "required": false,
+      "default": "mailto:info@kindheartsfund.com"
+    },
+    "label": {
+      "type": "string",
+      "default": "info@kindheartsfund.com"
+    },
+    "title": {
+      "type": "string",
+      "default": "E-mail us"
+    }
+  }
+}

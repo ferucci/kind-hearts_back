@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_components_addresses",
+  "info": {
+    "displayName": "address"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Office address"
+    },
+    "text": {
+      "type": "string",
+      "default": "63-36 110th St, Forest Hills, NY 11375"
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "borderColor": {
+      "type": "string"
+    }
+  }
+}

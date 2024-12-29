@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_blocks_hero_blocks",
+  "info": {
+    "displayName": "hero_block",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Charitable Foundation «Kind Hearts»"
+    },
+    "subtitle": {
+      "type": "string",
+      "required": true,
+      "default": "Kindness is proof of God"
+    },
+    "button": {
+      "type": "string",
+      "required": true,
+      "default": "Want to help"
+    },
+    "images": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.hero-images",
+      "required": true
+    }
+  }
+}

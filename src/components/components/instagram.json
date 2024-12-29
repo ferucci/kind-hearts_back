@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_components_instagrams",
+  "info": {
+    "displayName": "instagram"
+  },
+  "options": {},
+  "attributes": {
+    "href": {
+      "type": "string",
+      "default": "https://www.instagram.com/kindheartsfund?igsh=NnoxcjZ0dHV6N2d6"
+    },
+    "label": {
+      "type": "string",
+      "default": "@kindheartsfund"
+    },
+    "title": {
+      "type": "string",
+      "default": "Follow us on social media"
+    }
+  }
+}

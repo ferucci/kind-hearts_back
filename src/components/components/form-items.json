@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_components_form_items",
+  "info": {
+    "displayName": "form_items"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "default": "Introduce yourself"
+    },
+    "email": {
+      "type": "string",
+      "default": "Enter email address"
+    },
+    "descrioption": {
+      "type": "text",
+      "default": "Your question"
+    }
+  }
+}

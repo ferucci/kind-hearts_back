@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_blocks_cards",
+  "info": {
+    "displayName": "card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "card_paragraph": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.paragraph"
+    },
+    "button": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "linkTo": {
+      "type": "string"
+    }
+  }
+}

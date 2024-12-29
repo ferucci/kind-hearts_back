@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_how_supporteds",
+  "info": {
+    "displayName": "how_supported",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "How the state supports philanthropists",
+      "required": true
+    },
+    "paragraphs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.paragraph"
+    },
+    "advantages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.advantages"
+    }
+  }
+}

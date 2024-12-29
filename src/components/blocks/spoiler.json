@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blocks_spoilers",
+  "info": {
+    "displayName": "Spoiler",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "isEmail": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

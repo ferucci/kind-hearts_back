@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_blocks_what_we_dos",
+  "info": {
+    "displayName": "what_we_do",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "tags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.tags"
+    },
+    "title": {
+      "type": "string",
+      "default": "What we do",
+      "required": false
+    },
+    "paragraphs": {
+      "displayName": "paragraph",
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.paragraph"
+    },
+    "cards": {
+      "displayName": "card",
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.card",
+      "required": true
+    }
+  }
+}

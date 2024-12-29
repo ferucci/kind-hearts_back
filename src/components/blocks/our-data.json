@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_our_data",
+  "info": {
+    "displayName": "advantages_block",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "item": {
+      "displayName": "advantages",
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.advantages"
+    }
+  }
+}

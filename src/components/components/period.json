@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_components_periods",
+  "info": {
+    "displayName": "period",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "date": {
+      "type": "string",
+      "default": "June 2025"
+    },
+    "datetime": {
+      "type": "string",
+      "regex": "^\\d{4}-\\d{2}$",
+      "default": "2025-06"
+    }
+  }
+}

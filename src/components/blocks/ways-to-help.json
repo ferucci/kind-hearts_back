@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_ways_to_helps",
+  "info": {
+    "displayName": "ways_to_help",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Ways to help"
+    },
+    "description": {
+      "type": "text",
+      "default": "We accept any donations of any size: you can bring donations of substances, food, things (from real estate and transportation to children’s toys)."
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

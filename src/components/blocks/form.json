@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_blocks_forms",
+  "info": {
+    "displayName": "form",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Get a personal consultation"
+    },
+    "fields": {
+      "displayName": "form_items",
+      "type": "component",
+      "repeatable": false,
+      "component": "components.form-items"
+    },
+    "subtitle": {
+      "type": "text",
+      "default": "Fill out the form and we will contact you shortly."
+    }
+  }
+}

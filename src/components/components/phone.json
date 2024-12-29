@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_components_phones",
+  "info": {
+    "displayName": "phone",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "phone": {
+      "type": "biginteger",
+      "default": "17186350030"
+    },
+    "visual": {
+      "type": "string",
+      "default": "+1 (718) 6 350 030"
+    },
+    "title": {
+      "type": "string",
+      "default": "Call us"
+    }
+  }
+}

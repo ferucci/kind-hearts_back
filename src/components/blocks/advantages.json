@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_advantages",
+  "info": {
+    "displayName": "advantages",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "number": {
+      "type": "biginteger",
+      "required": true
+    },
+    "time": {
+      "type": "integer"
+    }
+  }
+}
