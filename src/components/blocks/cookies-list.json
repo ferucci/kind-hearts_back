@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_blocks_cookies_lists",
+  "info": {
+    "displayName": "cookies_list"
+  },
+  "options": {},
+  "attributes": {
+    "list": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.paragraph"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

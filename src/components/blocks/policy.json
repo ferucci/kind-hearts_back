@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_policies",
+  "info": {
+    "displayName": "policy",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Privacy Policy"
+    },
+    "content": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.paragraph"
+    }
+  }
+}

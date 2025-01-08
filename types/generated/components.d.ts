@@ -48,6 +48,33 @@ export interface BlocksContacts extends Struct.ComponentSchema {
   };
 }
 
+export interface BlocksContent1 extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_content_1s';
+  info: {
+    description: '';
+    displayName: 'content';
+  };
+  attributes: {
+    add_list: Schema.Attribute.Component<'blocks.cookies-list', true>;
+    description: Schema.Attribute.Component<'blocks.paragraph', true>;
+    list: Schema.Attribute.Component<'components.list', true>;
+    paragraphs: Schema.Attribute.Component<'blocks.paragraph', true>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksCookiesList extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_cookies_lists';
+  info: {
+    displayName: 'cookies_list';
+  };
+  attributes: {
+    list: Schema.Attribute.Component<'blocks.paragraph', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface BlocksForm extends Struct.ComponentSchema {
   collectionName: 'components_blocks_forms';
   info: {
@@ -104,6 +131,7 @@ export interface BlocksHowSupported extends Struct.ComponentSchema {
   };
   attributes: {
     advantages: Schema.Attribute.Component<'blocks.advantages', true>;
+    menuItem_title: Schema.Attribute.String;
     paragraphs: Schema.Attribute.Component<'blocks.paragraph', true>;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
@@ -152,6 +180,32 @@ export interface BlocksParagraph extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+  };
+}
+
+export interface BlocksPoliceSection extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_police_sections';
+  info: {
+    displayName: 'police_section';
+  };
+  attributes: {
+    inner_blocks: Schema.Attribute.Component<'blocks.content-1', true>;
+    link_connection: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'interpretation'>;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface BlocksPolicy extends Struct.ComponentSchema {
+  collectionName: 'components_blocks_policies';
+  info: {
+    description: '';
+    displayName: 'policy';
+  };
+  attributes: {
+    content: Schema.Attribute.Component<'blocks.paragraph', true>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Privacy Policy'>;
   };
 }
 
@@ -266,6 +320,16 @@ export interface ComponentsInstagram extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsList extends Struct.ComponentSchema {
+  collectionName: 'components_components_lists';
+  info: {
+    displayName: 'list';
+  };
+  attributes: {
+    item: Schema.Attribute.Text;
+  };
+}
+
 export interface ComponentsPeriod extends Struct.ComponentSchema {
   collectionName: 'components_components_periods';
   info: {
@@ -293,12 +357,27 @@ export interface ComponentsPhone extends Struct.ComponentSchema {
   };
 }
 
+export interface ComponentsSectionNames extends Struct.ComponentSchema {
+  collectionName: 'components_components_section_names';
+  info: {
+    description: '';
+    displayName: 'section_names';
+  };
+  attributes: {
+    link_connection: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'interpretation'>;
+    title: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'blocks.advantages': BlocksAdvantages;
       'blocks.card': BlocksCard;
       'blocks.contacts': BlocksContacts;
+      'blocks.content-1': BlocksContent1;
+      'blocks.cookies-list': BlocksCookiesList;
       'blocks.form': BlocksForm;
       'blocks.hero-block': BlocksHeroBlock;
       'blocks.hero-images': BlocksHeroImages;
@@ -307,6 +386,8 @@ declare module '@strapi/strapi' {
       'blocks.our-cases-card': BlocksOurCasesCard;
       'blocks.our-data': BlocksOurData;
       'blocks.paragraph': BlocksParagraph;
+      'blocks.police-section': BlocksPoliceSection;
+      'blocks.policy': BlocksPolicy;
       'blocks.spoiler': BlocksSpoiler;
       'blocks.tags': BlocksTags;
       'blocks.ways-to-help': BlocksWaysToHelp;
@@ -315,8 +396,10 @@ declare module '@strapi/strapi' {
       'components.email': ComponentsEmail;
       'components.form-items': ComponentsFormItems;
       'components.instagram': ComponentsInstagram;
+      'components.list': ComponentsList;
       'components.period': ComponentsPeriod;
       'components.phone': ComponentsPhone;
+      'components.section-names': ComponentsSectionNames;
     }
   }
 }

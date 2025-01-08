@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_components_section_names",
+  "info": {
+    "displayName": "section_names",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "link_connection": {
+      "type": "string",
+      "default": "interpretation"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

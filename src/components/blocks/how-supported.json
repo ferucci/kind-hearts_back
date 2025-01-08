@@ -20,6 +20,9 @@
       "type": "component",
       "repeatable": true,
       "component": "blocks.advantages"
+    },
+    "menuItem_title": {
+      "type": "string"
     }
   }
 }

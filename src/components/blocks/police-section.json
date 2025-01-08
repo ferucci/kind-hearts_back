@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_blocks_police_sections",
+  "info": {
+    "displayName": "police_section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "link_connection": {
+      "type": "string",
+      "default": "interpretation"
+    },
+    "inner_blocks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.content-1"
+    }
+  }
+}

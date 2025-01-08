@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_blocks_content_1s",
+  "info": {
+    "displayName": "content",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.paragraph"
+    },
+    "list": {
+      "displayName": "list",
+      "type": "component",
+      "repeatable": true,
+      "component": "components.list"
+    },
+    "title": {
+      "type": "string"
+    },
+    "paragraphs": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.paragraph"
+    },
+    "add_list": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.cookies-list"
+    }
+  }
+}
