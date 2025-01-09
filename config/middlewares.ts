@@ -29,7 +29,20 @@ export default [
       },
     },
   },
-  'strapi::cors',
+  {
+    name: 'strapi::cors',
+    config: {
+      enabled: true,
+      header: [
+        'Content-Type',
+        'Authorization',
+        'X-Frame-Options',
+        'Origin',
+        'Accept',
+      ],
+      origin: ['https://www.khcharity.com', 'https://khcharity.com', 'http://localhost:5173']
+    }
+  },
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
