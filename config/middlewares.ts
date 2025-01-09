@@ -1,17 +1,11 @@
 export default [
   'strapi::logger',
   'strapi::errors',
-  {
-    name: 'strapi::security',
-    config: {
-      contentSecurityPolicy: false,
-      cors: false
-    },
-  },
+  'strapi::security',
   {
     name: 'strapi::cors',
     config: {
-      enabled: true,
+      origin: ['https://www.khcharity.com', 'https://khcharity.com'],
       header: [
         'Content-Type',
         'Authorization',
@@ -19,7 +13,8 @@ export default [
         'Origin',
         'Accept',
       ],
-      origin: ['https://www.khcharity.com', 'https://khcharity.com', 'http://localhost:5173']
+      methods: ['GET', 'POST', 'HEAD', 'OPTIONS'],
+      keepHeaderOnError: true,
     }
   },
   'strapi::poweredBy',
