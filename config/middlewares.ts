@@ -12,7 +12,7 @@ export default [
         'X-Frame-Options',
         'Origin',
         'Accept',
-        'Response-Type',
+        "accept-language",
       ],
       methods: ['GET', 'POST', 'HEAD', 'OPTIONS'],
     }
