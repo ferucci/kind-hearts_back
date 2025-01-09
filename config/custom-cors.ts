@@ -5,7 +5,7 @@ export default () => {
     await next(); // Let the request pass through all previous middleware
 
     if (ctx.get("Origin") && ctx.response.status !== 404) {
-      const allowedOrigins = ["https://https://khcharity.com"];
+      const allowedOrigins = ["https://khcharity.com"];
       const requestOrigin = ctx.get("Origin");
 
       if (allowedOrigins.includes(requestOrigin)) {
