@@ -5,7 +5,7 @@ export default [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['https://www.khcharity.com', 'https://khcharity.com'],
+      origin: ['https://www.khcharity.com', 'https://api.khcharity.com'],
       header: [
         'Content-Type',
         'Authorization',
@@ -13,7 +13,6 @@ export default [
         'Origin',
         'Accept',
         'Response-Type',
-        'TESTOVI4',
       ],
       methods: ['GET', 'POST', 'HEAD', 'OPTIONS'],
       keepHeaderOnError: true,
