@@ -12,6 +12,8 @@ export default [
         'X-Frame-Options',
         'Origin',
         'Accept',
+        'Response-Type',
+        'TESTOVI4',
       ],
       methods: ['GET', 'POST', 'HEAD', 'OPTIONS'],
       keepHeaderOnError: true,
