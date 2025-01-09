@@ -16,9 +16,16 @@ export default [
       cors: {
         enabled: true,
         origin: ['https://www.khcharity.com', 'https://khcharity.com', 'http://localhost:5173'],
-        headers: ['*'],
-        methods: ['GET', 'OPTIONS'],
-        credentials: true
+        headers: [
+          'Content-Type',
+          'Authorization',
+          'X-Frame-Options',
+          'Origin',
+          'Accept',
+        ],
+        methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+        credentials: true,
+        maxAge: 3600
       },
     },
   },
