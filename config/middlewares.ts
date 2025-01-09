@@ -5,16 +5,12 @@ export default [
   {
     name: 'strapi::cors',
     config: {
+      enabled: true,
       origin: ['*', 'http://0.0.0.0:1337', 'http://api.khcharity.com', 'http://khcharity.com', 'https://api.khcharity.com', 'https://khcharity.com'],
-      headers: [
-        'Content-Type',
-        'Authorization',
-        'X-Frame-Options',
-        'Origin',
-        'Accept',
-        "accept-language",
-      ],
+      headers: ['*'],
       methods: ['GET', 'POST', 'HEAD', 'OPTIONS'],
+      keepHeaderOnError: true,
+      credentials: true
     }
   },
   'strapi::poweredBy',
