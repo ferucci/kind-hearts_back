@@ -5,7 +5,7 @@ export default [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['www.khcharity.com', 'khcharity.com', 'api.khcharity.com'],
+      origin: '*',
       headers: [
         'Content-Type',
         'Authorization',
