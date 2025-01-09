@@ -1,27 +1,28 @@
 export default [
   'strapi::logger',
   'strapi::errors',
-  'strapi::security',
   {
-    name: 'strapi::cors',
+    name: 'strapi::security',
     config: {
-      origin: ['https://www.khcharity.com', 'https://khcharity.com', 'http://localhost:5173'],
-      methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
-      headers: [
-        'Content-Type',
-        'Authorization',
-        'Origin',
-        'Accept',
-        'X-Requested-With',
-        'Access-Control-Allow-Headers',
-        'Access-Control-Request-Method',
-        'Access-Control-Request-Headers'
-      ],
-      keepHeaderOnError: true,
-      credentials: true,
-      maxAge: 86400
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          'connect-src': ["'self'", 'https:', 'http:'],
+          'img-src': ["'self'", 'data:', 'blob:', 'https:', 'http:'],
+          'media-src': ["'self'", 'data:', 'blob:', 'https:', 'http:'],
+          upgradeInsecureRequests: null,
+        },
+      },
+      cors: {
+        enabled: true,
+        origin: ['https://www.khcharity.com', 'https://khcharity.com', 'http://localhost:5173'],
+        headers: ['*'],
+        methods: ['GET', 'OPTIONS'],
+        credentials: true
+      },
     },
   },
+  'strapi::cors',
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
