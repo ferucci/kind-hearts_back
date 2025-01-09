@@ -1,5 +1,3 @@
-// src/middlewares/custom-cors.ts
-
 export default () => {
   return async (ctx, next) => {
     await next(); // Let the request pass through all previous middleware
