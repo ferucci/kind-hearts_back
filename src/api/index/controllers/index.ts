@@ -14,10 +14,7 @@ const allowedOrigins = [
 
 export default factories.createCoreController('api::index.index', ({ strapi }) => ({
   async find(ctx) {
-    const origin = ctx.request.header.origin;
-    if (allowedOrigins.includes(origin)) {
-      ctx.set('Access-Control-Allow-Origin', origin);
-    }
+    ctx.set('Access-Control-Allow-Origin', '*');
     const response = await super.find(ctx);
     return response;
   }
