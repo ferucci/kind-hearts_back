@@ -6,17 +6,6 @@ import { factories } from '@strapi/strapi'
 
 export default factories.createCoreController('api::index.index', ({ strapi }) => ({
   async find(ctx) {
-    const allowedOrigins = [
-      'https://khcharity.com/'
-    ];
-
-    const origin = ctx.request.header.origin;
-
-    // Set CORS headers with origin check
-    if (allowedOrigins.includes(origin)) {
-      ctx.set('Access-Control-Allow-Origin', origin);
-    }
-
     const response = await super.find(ctx);
 
     // Set CORS headers for multiple requests
