@@ -7,7 +7,6 @@ import { factories } from '@strapi/strapi'
 export default factories.createCoreController('api::index.index', ({ strapi }) => ({
   async find(ctx) {
     const allowedOrigins = [
-      'http://localhost:5173/',
       'https://khcharity.com/'
     ];
 
