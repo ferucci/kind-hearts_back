@@ -1,7 +1,8 @@
 {
   "collectionName": "components_components_form_items",
   "info": {
-    "displayName": "form_items"
+    "displayName": "form_items",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -13,7 +14,7 @@
       "type": "string",
       "default": "Enter email address"
     },
-    "descrioption": {
+    "description": {
       "type": "text",
       "default": "Your question"
     }

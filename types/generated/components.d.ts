@@ -293,10 +293,11 @@ export interface ComponentsEmail extends Struct.ComponentSchema {
 export interface ComponentsFormItems extends Struct.ComponentSchema {
   collectionName: 'components_components_form_items';
   info: {
+    description: '';
     displayName: 'form_items';
   };
   attributes: {
-    descrioption: Schema.Attribute.Text &
+    description: Schema.Attribute.Text &
       Schema.Attribute.DefaultTo<'Your question'>;
     email: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Enter email address'>;
