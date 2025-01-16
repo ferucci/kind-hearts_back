@@ -6,14 +6,16 @@
   },
   "options": {},
   "attributes": {
-    "description": {
-      "type": "text"
-    },
     "item": {
       "displayName": "advantages",
       "type": "component",
       "repeatable": true,
       "component": "blocks.advantages"
+    },
+    "descriptions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.paragraph"
     }
   }
 }

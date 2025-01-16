@@ -1,7 +1,8 @@
 {
   "collectionName": "components_components_addresses",
   "info": {
-    "displayName": "address"
+    "displayName": "address",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -18,6 +19,14 @@
     },
     "borderColor": {
       "type": "string"
+    },
+    "bg": {
+      "type": "enumeration",
+      "enum": [
+        "fefefe",
+        "eeeeee",
+        "f0f0f0"
+      ]
     }
   }
 }

@@ -98,12 +98,10 @@ export interface BlocksHeroBlock extends Struct.ComponentSchema {
   };
   attributes: {
     button: Schema.Attribute.String &
-      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Want to help'>;
     images: Schema.Attribute.Component<'blocks.hero-images', false> &
       Schema.Attribute.Required;
     subtitle: Schema.Attribute.String &
-      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Kindness is proof of God'>;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &
@@ -167,7 +165,7 @@ export interface BlocksOurData extends Struct.ComponentSchema {
     displayName: 'advantages_block';
   };
   attributes: {
-    description: Schema.Attribute.Text;
+    descriptions: Schema.Attribute.Component<'blocks.paragraph', true>;
     item: Schema.Attribute.Component<'blocks.advantages', true>;
   };
 }
@@ -179,7 +177,7 @@ export interface BlocksParagraph extends Struct.ComponentSchema {
     displayName: 'paragraphs';
   };
   attributes: {
-    description: Schema.Attribute.Text;
+    text: Schema.Attribute.Text;
   };
 }
 
@@ -217,6 +215,7 @@ export interface BlocksSpoiler extends Struct.ComponentSchema {
   };
   attributes: {
     content: Schema.Attribute.Text & Schema.Attribute.Required;
+    contents: Schema.Attribute.Component<'blocks.paragraph', true>;
     isEmail: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -264,10 +263,12 @@ export interface BlocksWhatWeDo extends Struct.ComponentSchema {
 export interface ComponentsAddress extends Struct.ComponentSchema {
   collectionName: 'components_components_addresses';
   info: {
+    description: '';
     displayName: 'address';
   };
   attributes: {
     backgroundColor: Schema.Attribute.String;
+    bg: Schema.Attribute.Enumeration<['fefefe', 'eeeeee', 'f0f0f0']>;
     borderColor: Schema.Attribute.String;
     text: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'63-36 110th St, Forest Hills, NY 11375'>;

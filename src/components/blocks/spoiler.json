@@ -17,6 +17,11 @@
     "isEmail": {
       "type": "boolean",
       "default": false
+    },
+    "contents": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.paragraph"
     }
   }
 }
