@@ -1,21 +1,17 @@
 export default () => ({
-  upload: {
-    config: {
-      providerOptions: {
-        sizeLimit: 10 * 1024 * 1024, // 10MB
-      },
-      breakpoints: {
-        large: 1000,
-        medium: 750,
-        small: 500,
-        thumbnail: 150,
-      },
-      formats: ['original', 'webp', 'avif'],
-      transformers: {
-        image: {
-          exclude: ['.svg']
-        }
-      }
-    },
-  },
+  // 'webp-converter': {
+  //   enabled: true,
+  //   config: {
+  //     // mimeTypes that converts to WebP. Default is ['image/png', 'image/jpeg', 'image/jpg']
+  //     mimeTypes: ['image/png', 'image/jpeg', 'image/jpg'],
+  //     options: {
+  //       // WebP options: https://sharp.pixelplumbing.com/api-output#webp
+  //       // quality: 80,
+  //       // lossless: false,
+  //       // nearLossless: false,
+  //       // alphaQuality: 100,
+  //       // force: true
+  //     },
+  //   },
+  // },
 });

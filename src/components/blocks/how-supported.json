@@ -9,7 +9,7 @@
     "title": {
       "type": "string",
       "default": "How the state supports philanthropists",
-      "required": true
+      "required": false
     },
     "paragraphs": {
       "type": "component",

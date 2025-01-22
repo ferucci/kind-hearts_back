@@ -7,8 +7,8 @@ export interface BlocksAdvantages extends Struct.ComponentSchema {
     displayName: 'advantages';
   };
   attributes: {
-    number: Schema.Attribute.BigInteger & Schema.Attribute.Required;
-    text: Schema.Attribute.String & Schema.Attribute.Required;
+    number: Schema.Attribute.BigInteger;
+    text: Schema.Attribute.String;
     time: Schema.Attribute.Integer;
     title: Schema.Attribute.String &
       Schema.Attribute.SetMinMaxLength<{
@@ -24,9 +24,12 @@ export interface BlocksCard extends Struct.ComponentSchema {
     displayName: 'card';
   };
   attributes: {
+    alt_field: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'image description'>;
     button: Schema.Attribute.String;
     card_paragraph: Schema.Attribute.Component<'blocks.paragraph', true>;
-    image: Schema.Attribute.Media<'images' | 'videos'>;
+    image: Schema.Attribute.Media<'images' | 'videos'> &
+      Schema.Attribute.Required;
     linkTo: Schema.Attribute.String;
     title: Schema.Attribute.String;
   };
@@ -116,8 +119,10 @@ export interface BlocksHeroImages extends Struct.ComponentSchema {
     displayName: 'hero_images';
   };
   attributes: {
-    main_image: Schema.Attribute.Media<'images' | 'files'>;
-    mobile_image: Schema.Attribute.Media<'images' | 'files'>;
+    main_image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
+    mobile_image: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
   };
 }
 
@@ -132,7 +137,6 @@ export interface BlocksHowSupported extends Struct.ComponentSchema {
     menuItem_title: Schema.Attribute.String;
     paragraphs: Schema.Attribute.Component<'blocks.paragraph', true>;
     title: Schema.Attribute.String &
-      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'How the state supports philanthropists'>;
   };
 }
@@ -152,6 +156,8 @@ export interface BlocksOurCasesCard extends Struct.ComponentSchema {
     displayName: 'our_cases_card';
   };
   attributes: {
+    alt_field: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'image description'>;
     image: Schema.Attribute.Media<'images' | 'videos', true>;
     period: Schema.Attribute.Component<'components.period', false>;
     title: Schema.Attribute.String;
@@ -214,9 +220,8 @@ export interface BlocksSpoiler extends Struct.ComponentSchema {
     displayName: 'Spoiler';
   };
   attributes: {
-    content: Schema.Attribute.Text & Schema.Attribute.Required;
-    contents: Schema.Attribute.Component<'blocks.paragraph', true>;
     isEmail: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    paragraphs: Schema.Attribute.Component<'blocks.paragraph', true>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -240,7 +245,7 @@ export interface BlocksWaysToHelp extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text &
       Schema.Attribute.DefaultTo<'We accept any donations of any size: you can bring donations of substances, food, things (from real estate and transportation to children\u2019s toys).'>;
-    image: Schema.Attribute.Media<'images'>;
+    image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Ways to help'>;
   };
 }
@@ -267,9 +272,8 @@ export interface ComponentsAddress extends Struct.ComponentSchema {
     displayName: 'address';
   };
   attributes: {
-    backgroundColor: Schema.Attribute.String;
-    bg: Schema.Attribute.Enumeration<['fefefe', 'eeeeee', 'f0f0f0']>;
-    borderColor: Schema.Attribute.String;
+    backgroundColor: Schema.Attribute.Enumeration<['#fffae9', '#f2ffef']>;
+    borderColor: Schema.Attribute.Enumeration<['#dfd1a2', '#ccdbc9']>;
     text: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'63-36 110th St, Forest Hills, NY 11375'>;
     title: Schema.Attribute.String &

@@ -15,17 +15,17 @@
       "default": "63-36 110th St, Forest Hills, NY 11375"
     },
     "backgroundColor": {
-      "type": "string"
-    },
-    "borderColor": {
-      "type": "string"
-    },
-    "bg": {
       "type": "enumeration",
       "enum": [
-        "fefefe",
-        "eeeeee",
-        "f0f0f0"
+        "#fffae9",
+        "#f2ffef"
+      ]
+    },
+    "borderColor": {
+      "type": "enumeration",
+      "enum": [
+        "#dfd1a2",
+        "#ccdbc9"
       ]
     }
   }

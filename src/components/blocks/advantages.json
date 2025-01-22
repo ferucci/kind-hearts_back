@@ -12,11 +12,11 @@
     },
     "text": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "number": {
       "type": "biginteger",
-      "required": true
+      "required": false
     },
     "time": {
       "type": "integer"

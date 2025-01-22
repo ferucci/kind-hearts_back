@@ -20,7 +20,7 @@
     "image": {
       "type": "media",
       "multiple": false,
-      "required": false,
+      "required": true,
       "allowedTypes": [
         "images",
         "videos"
@@ -28,6 +28,10 @@
     },
     "linkTo": {
       "type": "string"
+    },
+    "alt_field": {
+      "type": "string",
+      "default": "image description"
     }
   }
 }

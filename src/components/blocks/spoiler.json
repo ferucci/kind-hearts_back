@@ -10,15 +10,11 @@
       "type": "string",
       "required": true
     },
-    "content": {
-      "type": "text",
-      "required": true
-    },
     "isEmail": {
       "type": "boolean",
       "default": false
     },
-    "contents": {
+    "paragraphs": {
       "type": "component",
       "repeatable": true,
       "component": "blocks.paragraph"

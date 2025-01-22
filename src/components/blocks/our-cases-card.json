@@ -24,6 +24,10 @@
         "images",
         "videos"
       ]
+    },
+    "alt_field": {
+      "type": "string",
+      "default": "image description"
     }
   }
 }

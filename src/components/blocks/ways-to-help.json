@@ -15,11 +15,12 @@
       "default": "We accept any donations of any size: you can bring donations of substances, food, things (from real estate and transportation to children’s toys)."
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }

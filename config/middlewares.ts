@@ -1,5 +1,3 @@
-import { config } from "process";
-
 export default [
   'strapi::logger',
   'strapi::errors',

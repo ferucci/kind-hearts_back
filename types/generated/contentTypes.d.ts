@@ -373,7 +373,7 @@ export interface ApiIndexIndex extends Struct.CollectionTypeSchema {
   collectionName: 'indices';
   info: {
     description: '';
-    displayName: 'main';
+    displayName: 'Main';
     pluralName: 'indices';
     singularName: 'index';
   };
