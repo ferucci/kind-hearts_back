@@ -14,7 +14,7 @@
     "title": {
       "type": "string",
       "default": "What we do",
-      "required": false
+      "required": true
     },
     "paragraphs": {
       "displayName": "paragraph",

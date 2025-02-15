@@ -1,17 +1,20 @@
 {
   "collectionName": "components_components_instagrams",
   "info": {
-    "displayName": "instagram"
+    "displayName": "instagram",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "href": {
       "type": "string",
-      "default": "https://www.instagram.com/kindheartsfund?igsh=NnoxcjZ0dHV6N2d6"
+      "default": "https://www.instagram.com/kindheartsfund?igsh=NnoxcjZ0dHV6N2d6",
+      "required": true
     },
     "label": {
       "type": "string",
-      "default": "@kindheartsfund"
+      "default": "@kindheartsfund",
+      "required": true
     },
     "title": {
       "type": "string",

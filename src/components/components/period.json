@@ -6,10 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "date": {
-      "type": "string",
-      "default": "June 2025"
-    },
     "datetime": {
       "type": "string",
       "regex": "^\\d{4}-\\d{2}$",

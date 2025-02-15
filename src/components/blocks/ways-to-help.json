@@ -8,7 +8,8 @@
   "attributes": {
     "title": {
       "type": "string",
-      "default": "Ways to help"
+      "default": "Ways to help",
+      "required": true
     },
     "description": {
       "type": "text",

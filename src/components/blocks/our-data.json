@@ -10,7 +10,8 @@
       "displayName": "advantages",
       "type": "component",
       "repeatable": true,
-      "component": "blocks.advantages"
+      "component": "blocks.advantages",
+      "required": true
     },
     "descriptions": {
       "type": "component",

@@ -381,30 +381,38 @@ export interface ApiIndexIndex extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    advantages: Schema.Attribute.Component<'blocks.our-data', false>;
-    contacts: Schema.Attribute.Component<'blocks.contacts', false>;
+    advantages: Schema.Attribute.Component<'blocks.our-data', false> &
+      Schema.Attribute.Required;
+    contacts: Schema.Attribute.Component<'blocks.contacts', false> &
+      Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    form: Schema.Attribute.Component<'blocks.form', false>;
-    hero: Schema.Attribute.Component<'blocks.hero-block', false>;
-    how_supported: Schema.Attribute.Component<'blocks.how-supported', false>;
+    form: Schema.Attribute.Component<'blocks.form', false> &
+      Schema.Attribute.Required;
+    hero: Schema.Attribute.Component<'blocks.hero-block', false> &
+      Schema.Attribute.Required;
+    how_supported: Schema.Attribute.Component<'blocks.how-supported', false> &
+      Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::index.index'> &
       Schema.Attribute.Private;
-    logo_images: Schema.Attribute.Component<'blocks.hero-images', false>;
+    logo_images: Schema.Attribute.Component<'blocks.hero-images', false> &
+      Schema.Attribute.Required;
     name: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Kind Hearts'>;
     our_cases_cards: Schema.Attribute.DynamicZone<['blocks.our-cases-card']>;
     our_cases_title: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Our cases'>;
     publishedAt: Schema.Attribute.DateTime;
     questions: Schema.Attribute.DynamicZone<['blocks.spoiler']>;
-    questions_title: Schema.Attribute.String;
+    questions_title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ways_to_help: Schema.Attribute.Component<'blocks.ways-to-help', false>;
-    what_we_do: Schema.Attribute.Component<'blocks.what-we-do', false>;
+    what_we_do: Schema.Attribute.Component<'blocks.what-we-do', false> &
+      Schema.Attribute.Required;
   };
 }
 

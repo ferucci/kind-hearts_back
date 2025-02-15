@@ -8,32 +8,39 @@
   "attributes": {
     "title": {
       "type": "string",
-      "default": "Contacts"
+      "default": "Contacts",
+      "required": true
     },
     "phone": {
       "type": "component",
       "repeatable": false,
-      "component": "components.phone"
+      "component": "components.phone",
+      "required": true
     },
     "email": {
       "displayName": "email",
       "type": "component",
       "repeatable": false,
-      "component": "components.email"
+      "component": "components.email",
+      "required": true
     },
     "instagram": {
       "displayName": "instagram",
       "type": "component",
       "repeatable": false,
-      "component": "components.instagram"
+      "component": "components.instagram",
+      "required": true
     },
     "address": {
       "type": "component",
       "repeatable": true,
-      "component": "components.address"
+      "component": "components.address",
+      "required": true
     },
     "map_link": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "default": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10168.945675482133!2d-73.8520030792104!3d40.73462019222683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25e2c9f40d3d3%3A0x9be550f4a7fea8cf!2zNjMtMzYgMTEwdGggU3QsIEZvcmVzdCBIaWxscywgTlkgMTEzNzUsINCh0KjQkA!5e0!3m2!1sru!2sru!4v1713348979667!5m2!1sru!2sru"
     }
   }
 }

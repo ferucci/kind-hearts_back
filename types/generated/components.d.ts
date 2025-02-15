@@ -7,7 +7,7 @@ export interface BlocksAdvantages extends Struct.ComponentSchema {
     displayName: 'advantages';
   };
   attributes: {
-    number: Schema.Attribute.BigInteger;
+    number: Schema.Attribute.BigInteger & Schema.Attribute.Required;
     text: Schema.Attribute.String;
     time: Schema.Attribute.Integer;
     title: Schema.Attribute.String &
@@ -42,12 +42,20 @@ export interface BlocksContacts extends Struct.ComponentSchema {
     displayName: 'contacts';
   };
   attributes: {
-    address: Schema.Attribute.Component<'components.address', true>;
-    email: Schema.Attribute.Component<'components.email', false>;
-    instagram: Schema.Attribute.Component<'components.instagram', false>;
-    map_link: Schema.Attribute.String;
-    phone: Schema.Attribute.Component<'components.phone', false>;
-    title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Contacts'>;
+    address: Schema.Attribute.Component<'components.address', true> &
+      Schema.Attribute.Required;
+    email: Schema.Attribute.Component<'components.email', false> &
+      Schema.Attribute.Required;
+    instagram: Schema.Attribute.Component<'components.instagram', false> &
+      Schema.Attribute.Required;
+    map_link: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10168.945675482133!2d-73.8520030792104!3d40.73462019222683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25e2c9f40d3d3%3A0x9be550f4a7fea8cf!2zNjMtMzYgMTEwdGggU3QsIEZvcmVzdCBIaWxscywgTlkgMTEzNzUsINCh0KjQkA!5e0!3m2!1sru!2sru!4v1713348979667!5m2!1sru!2sru'>;
+    phone: Schema.Attribute.Component<'components.phone', false> &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Contacts'>;
   };
 }
 
@@ -89,6 +97,7 @@ export interface BlocksForm extends Struct.ComponentSchema {
     subtitle: Schema.Attribute.Text &
       Schema.Attribute.DefaultTo<'Fill out the form and we will contact you shortly.'>;
     title: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Get a personal consultation'>;
   };
 }
@@ -101,6 +110,7 @@ export interface BlocksHeroBlock extends Struct.ComponentSchema {
   };
   attributes: {
     button: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Want to help'>;
     images: Schema.Attribute.Component<'blocks.hero-images', false> &
       Schema.Attribute.Required;
@@ -133,10 +143,13 @@ export interface BlocksHowSupported extends Struct.ComponentSchema {
     displayName: 'how_supported';
   };
   attributes: {
-    advantages: Schema.Attribute.Component<'blocks.advantages', true>;
-    menuItem_title: Schema.Attribute.String;
+    how_supported_tags: Schema.Attribute.Component<
+      'components.how-supported-tags',
+      true
+    >;
     paragraphs: Schema.Attribute.Component<'blocks.paragraph', true>;
     title: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'How the state supports philanthropists'>;
   };
 }
@@ -158,7 +171,8 @@ export interface BlocksOurCasesCard extends Struct.ComponentSchema {
   attributes: {
     alt_field: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'image description'>;
-    image: Schema.Attribute.Media<'images' | 'videos', true>;
+    image: Schema.Attribute.Media<'images' | 'videos', true> &
+      Schema.Attribute.Required;
     period: Schema.Attribute.Component<'components.period', false>;
     title: Schema.Attribute.String;
   };
@@ -172,7 +186,8 @@ export interface BlocksOurData extends Struct.ComponentSchema {
   };
   attributes: {
     descriptions: Schema.Attribute.Component<'blocks.paragraph', true>;
-    item: Schema.Attribute.Component<'blocks.advantages', true>;
+    item: Schema.Attribute.Component<'blocks.advantages', true> &
+      Schema.Attribute.Required;
   };
 }
 
@@ -221,7 +236,8 @@ export interface BlocksSpoiler extends Struct.ComponentSchema {
   };
   attributes: {
     isEmail: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    paragraphs: Schema.Attribute.Component<'blocks.paragraph', true>;
+    paragraphs: Schema.Attribute.Component<'blocks.paragraph', true> &
+      Schema.Attribute.Required;
     title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -246,7 +262,9 @@ export interface BlocksWaysToHelp extends Struct.ComponentSchema {
     description: Schema.Attribute.Text &
       Schema.Attribute.DefaultTo<'We accept any donations of any size: you can bring donations of substances, food, things (from real estate and transportation to children\u2019s toys).'>;
     image: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
-    title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Ways to help'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Ways to help'>;
   };
 }
 
@@ -261,7 +279,9 @@ export interface BlocksWhatWeDo extends Struct.ComponentSchema {
       Schema.Attribute.Required;
     paragraphs: Schema.Attribute.Component<'blocks.paragraph', true>;
     tags: Schema.Attribute.Component<'blocks.tags', true>;
-    title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'What we do'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'What we do'>;
   };
 }
 
@@ -277,6 +297,7 @@ export interface ComponentsAddress extends Struct.ComponentSchema {
     text: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'63-36 110th St, Forest Hills, NY 11375'>;
     title: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Office address'>;
   };
 }
@@ -284,12 +305,15 @@ export interface ComponentsAddress extends Struct.ComponentSchema {
 export interface ComponentsEmail extends Struct.ComponentSchema {
   collectionName: 'components_components_emails';
   info: {
+    description: '';
     displayName: 'email';
   };
   attributes: {
     href: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'mailto:info@kindheartsfund.com'>;
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'info@kindheartsfund.com'>;
     label: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'info@kindheartsfund.com'>;
     title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'E-mail us'>;
   };
@@ -303,23 +327,41 @@ export interface ComponentsFormItems extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Your question'>;
     email: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Enter email address'>;
     name: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Introduce yourself'>;
+  };
+}
+
+export interface ComponentsHowSupportedTags extends Struct.ComponentSchema {
+  collectionName: 'components_components_how_supported_tags';
+  info: {
+    displayName: 'how_supported_tags';
+  };
+  attributes: {
+    number: Schema.Attribute.Integer & Schema.Attribute.Required;
+    text: Schema.Attribute.String & Schema.Attribute.DefaultTo<'tax free'>;
+    title: Schema.Attribute.String;
   };
 }
 
 export interface ComponentsInstagram extends Struct.ComponentSchema {
   collectionName: 'components_components_instagrams';
   info: {
+    description: '';
     displayName: 'instagram';
   };
   attributes: {
     href: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'https://www.instagram.com/kindheartsfund?igsh=NnoxcjZ0dHV6N2d6'>;
     label: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'@kindheartsfund'>;
     title: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'Follow us on social media'>;
@@ -343,7 +385,6 @@ export interface ComponentsPeriod extends Struct.ComponentSchema {
     displayName: 'period';
   };
   attributes: {
-    date: Schema.Attribute.String & Schema.Attribute.DefaultTo<'June 2025'>;
     datetime: Schema.Attribute.String & Schema.Attribute.DefaultTo<'2025-06'>;
   };
 }
@@ -355,11 +396,13 @@ export interface ComponentsPhone extends Struct.ComponentSchema {
     displayName: 'phone';
   };
   attributes: {
-    phone: Schema.Attribute.BigInteger &
+    href: Schema.Attribute.BigInteger &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'17186350030'>;
-    title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Call us'>;
-    visual: Schema.Attribute.String &
+    label: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'+1 (718) 6 350 030'>;
+    title: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Call us'>;
   };
 }
 
@@ -401,6 +444,7 @@ declare module '@strapi/strapi' {
       'components.address': ComponentsAddress;
       'components.email': ComponentsEmail;
       'components.form-items': ComponentsFormItems;
+      'components.how-supported-tags': ComponentsHowSupportedTags;
       'components.instagram': ComponentsInstagram;
       'components.list': ComponentsList;
       'components.period': ComponentsPeriod;

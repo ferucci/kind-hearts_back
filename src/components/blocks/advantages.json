@@ -16,7 +16,7 @@
     },
     "number": {
       "type": "biginteger",
-      "required": false
+      "required": true
     },
     "time": {
       "type": "integer"

@@ -8,15 +8,18 @@
   "attributes": {
     "name": {
       "type": "string",
-      "default": "Introduce yourself"
+      "default": "Introduce yourself",
+      "required": true
     },
     "email": {
       "type": "string",
-      "default": "Enter email address"
+      "default": "Enter email address",
+      "required": true
     },
     "description": {
       "type": "text",
-      "default": "Your question"
+      "default": "Your question",
+      "required": true
     }
   }
 }

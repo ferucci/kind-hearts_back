@@ -21,22 +21,26 @@
     "advantages": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.our-data"
+      "component": "blocks.our-data",
+      "required": true
     },
     "what_we_do": {
       "displayName": "what_we_do",
       "type": "component",
       "repeatable": false,
-      "component": "blocks.what-we-do"
+      "component": "blocks.what-we-do",
+      "required": true
     },
     "hero": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.hero-block"
+      "component": "blocks.hero-block",
+      "required": true
     },
     "our_cases_title": {
       "type": "string",
-      "default": "Our cases"
+      "default": "Our cases",
+      "required": true
     },
     "our_cases_cards": {
       "type": "dynamiczone",
@@ -52,20 +56,24 @@
     "how_supported": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.how-supported"
+      "component": "blocks.how-supported",
+      "required": true
     },
     "questions_title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "form": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.form"
+      "component": "blocks.form",
+      "required": true
     },
     "contacts": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.contacts"
+      "component": "blocks.contacts",
+      "required": true
     },
     "name": {
       "type": "string",
@@ -74,7 +82,8 @@
     "logo_images": {
       "type": "component",
       "repeatable": false,
-      "component": "blocks.hero-images"
+      "component": "blocks.hero-images",
+      "required": true
     }
   }
 }

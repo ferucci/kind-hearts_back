@@ -8,7 +8,8 @@
   "attributes": {
     "title": {
       "type": "string",
-      "default": "Get a personal consultation"
+      "default": "Get a personal consultation",
+      "required": true
     },
     "fields": {
       "displayName": "form_items",

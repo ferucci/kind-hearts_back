@@ -9,20 +9,18 @@
     "title": {
       "type": "string",
       "default": "How the state supports philanthropists",
-      "required": false
+      "required": true
     },
     "paragraphs": {
       "type": "component",
       "repeatable": true,
       "component": "blocks.paragraph"
     },
-    "advantages": {
+    "how_supported_tags": {
+      "displayName": "how_supported_tags",
       "type": "component",
       "repeatable": true,
-      "component": "blocks.advantages"
-    },
-    "menuItem_title": {
-      "type": "string"
+      "component": "components.how-supported-tags"
     }
   }
 }

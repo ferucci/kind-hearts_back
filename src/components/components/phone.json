@@ -6,13 +6,15 @@
   },
   "options": {},
   "attributes": {
-    "phone": {
+    "href": {
       "type": "biginteger",
-      "default": "17186350030"
+      "default": "17186350030",
+      "required": true
     },
-    "visual": {
+    "label": {
       "type": "string",
-      "default": "+1 (718) 6 350 030"
+      "default": "+1 (718) 6 350 030",
+      "required": true
     },
     "title": {
       "type": "string",

@@ -17,7 +17,8 @@
     "paragraphs": {
       "type": "component",
       "repeatable": true,
-      "component": "blocks.paragraph"
+      "component": "blocks.paragraph",
+      "required": true
     }
   }
 }
