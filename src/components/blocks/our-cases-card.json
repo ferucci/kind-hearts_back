@@ -27,7 +27,8 @@
     },
     "alt_field": {
       "type": "string",
-      "default": "image description"
+      "default": "image description",
+      "required": true
     }
   }
 }

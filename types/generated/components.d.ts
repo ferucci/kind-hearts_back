@@ -25,6 +25,7 @@ export interface BlocksCard extends Struct.ComponentSchema {
   };
   attributes: {
     alt_field: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'image description'>;
     button: Schema.Attribute.String;
     card_paragraph: Schema.Attribute.Component<'blocks.paragraph', true>;
@@ -170,6 +171,7 @@ export interface BlocksOurCasesCard extends Struct.ComponentSchema {
   };
   attributes: {
     alt_field: Schema.Attribute.String &
+      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'image description'>;
     image: Schema.Attribute.Media<'images' | 'videos', true> &
       Schema.Attribute.Required;
